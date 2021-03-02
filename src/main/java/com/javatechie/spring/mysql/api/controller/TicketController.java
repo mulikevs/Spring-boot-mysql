@@ -20,7 +20,7 @@ public class TicketController {
 
 	@PostMapping("/bookTickets")
 	public String bookTicket(@RequestBody List<Ticket> tickets) {
-		dao.save(tickets);
+		dao.saveAll(tickets);
 		return "ticket booked : " + tickets.size();
 	}
 
